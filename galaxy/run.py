@@ -31,7 +31,7 @@ if __name__ == "__main__":
     # if params.maxRuleIds<0:
     #     logging.error('Max rule ID cannot be less than 0: '+str(params.maxRuleIds))
     #     exit(1)
-    rpReader_entrypoint(sys.argv[1:])
+    rpReader_entrypoint(sys.argv[1:]+['-sm', 'db'])
     # rpToolServe.main(params.output,
     #                  params.rp2paths_compounds,
     #                  params.rp2_pathways,
