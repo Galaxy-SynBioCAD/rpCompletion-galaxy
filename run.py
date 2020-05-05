@@ -6,8 +6,8 @@ Created on May 4 2020
 @description: Galaxy script to query rpReader REST service
 
 """
-import sys
-sys.path.insert(0, '/home/rpReader')
+from sys import path as sys_path
+sys_path.insert(0, '/home/rpReader')
 from rpReader import build_parser as rpReader_buildparser
 from rpReader import entrypoint as rpReader_entrypoint
 from tarfile import open as tarfile_open
