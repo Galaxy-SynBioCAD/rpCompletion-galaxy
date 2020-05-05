@@ -1,4 +1,4 @@
-<tool id="rp2Reader" name="Pathways to SBML" version="0.1">
+<tool id="rpReader" name="Pathways to SBML" version="0.1">
   <description>From the output of RP2Paths and RetroPath2.0, generate SBML pathways with mono-component reactions (Galaxy Version 0.1)</description>
   <requirements>
     <container type="docker">brsynth/rpreader</container>
