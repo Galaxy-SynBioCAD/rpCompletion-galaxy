@@ -8,8 +8,8 @@ Created on May 4 2020
 """
 from sys import path as sys_path
 sys_path.insert(0, '/home/rpReader')
-from rpReader import build_parser as rpReader_buildparser
-from rpReader import entrypoint as rpReader_entrypoint
+from rpReader import build_parser as tool_buildparser
+from rpReader import entrypoint as tool_entrypoint
 from tarfile import open as tarfile_open
 from tarfile import TarInfo as tarfile_TarInfo
 from tempfile import TemporaryDirectory as tempfile_tempdir
@@ -18,7 +18,7 @@ from os import listdir as os_listdir
 
 
 if __name__ == "__main__":
-    parser = rpReader_buildparser()
+    parser = tool_buildparser()
     params = parser.parse_args()
 
     with tempfile_tempdir() as tmpdirname:
@@ -29,7 +29,7 @@ if __name__ == "__main__":
             '-output', tmpdirname,
             '-sm', 'db'
             ]
-        rpReader_entrypoint(args)
+        tool_entrypoint(args)
         with tarfile_open(params.output, mode='w:xz') as tf:
             for name in os_listdir(tmpdirname):
                 tf.add(tmpdirname+"/"+name, arcname=name)
