@@ -32,4 +32,4 @@ if __name__ == "__main__":
         rpReader_entrypoint(args)
         with tarfile_open(params.output, mode='w:xz') as tf:
             for name in os_listdir(tmpdirname):
-                tf.addfile(tarfile_TarInfo(name), open(tmpdirname+"/"+name))
+                tf.add(tmpdirname+"/"+name, arcname=name)
