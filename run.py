@@ -20,8 +20,6 @@ if __name__ == "__main__":
     parser = rpReader_buildparser()
     params = parser.parse_args()
 
-    print(params)
-
     with tempfile_tempdir() as tmpdirname:
         args = [
             '-rp2paths_compounds', params.rp2paths_compounds,
