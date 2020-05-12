@@ -13,7 +13,6 @@ from rpReader import entrypoint as rpReader_entrypoint
 from tarfile import open as tarfile_open
 from tarfile import TarInfo as tarfile_TarInfo
 from tempfile import TemporaryDirectory as tempfile_tempdir
-from os import path as os_path
 from os import listdir as os_listdir
 
 
@@ -31,6 +30,6 @@ if __name__ == "__main__":
             '-sm', 'db'
             ]
         rpReader_entrypoint(args)
-        with tarfile_open(fileobj=params.output, mode='w:xz') as tf:
+        with tarfile_open(params.output, mode='w:xz') as tf:
             for name in os_listdir(tmpdirname):
                 tf.addfile(tarfile_TarInfo(name), open(tmpdirname+"/"+name))
