@@ -3,7 +3,7 @@
 Created on May 4 2020
 
 @author: Joan Hérisson
-@description: Galaxy script to query rpReader REST service
+@description: Galaxy script to query rpReader service
 
 """
 from sys import path as sys_path
