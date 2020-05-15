@@ -11,20 +11,20 @@
     '$__tool_directory__/run.py' -rp2paths_compounds '$rp2paths_compounds' -rp2_pathways '$rp2_pathways' -rp2paths_pathways '$rp2paths_pathways' -output '$output' -maxRuleIds '$adv.maxRuleIds' -compartment_id '$adv.compartment_id' -pathway_id '$adv.pathway_id' -species_group_id '$adv.species_group_id' -upper_flux_bound '$adv.upper_flux_bound' -lower_flux_bound '$adv.lower_flux_bound'
   ]]></command>
   <inputs>
-    <param name="rp2paths_pathways" type="data" format="csv" label="RP2paths Pathways" />
-    <param name="rp2paths_compounds" type="data" format="tsv" label="RP2paths Compounds" />
-    <param name="rp2_pathways" type="data" format="csv" label="RetroPath2.0 Pathways" />
+    <param name="rp2paths_pathways" type="data" format="csv" label="RP2paths pathways" />
+    <param name="rp2paths_compounds" type="data" format="tsv" label="RP2paths compounds" />
+    <param name="rp2_pathways" type="data" format="csv" label="RetroPath2.0 pathways" />
     <section name="adv" title="Advanced Options" expanded="false">
-      <param name="maxRuleIds" type="integer" value="2" label="out_paths max number of substeps per step" />
+      <param name="maxRuleIds" type="integer" value="2" label="Max reactions per reaction rule" />
       <param name="compartment_id" type="text" value="MNXC3" label="SBML compartment ID" />
-      <param name="pathway_id" type="text" value="rp_pathway" label="rpSBML pathway ID" />
+      <param name="pathway_id" type="text" value="rp_pathway" label="SBML heterologous pathway ID" />
       <param name="species_group_id" type="text" value="central_species" label="rpSBML Central Species ID" />
       <param name="upper_flux_bound" type="integer" value="999999" label="Upper flux bound" />
       <param name="lower_flux_bound" type="integer" value="0" label="Lower flux bound" />
     </section>
   </inputs>
   <outputs>
-    <data name="output" format="tar" label="rpReader" />
+    <data name="output" format="tar" label="Heterologous pathways" />
   </outputs>
   <help><![CDATA[
 rpReader
