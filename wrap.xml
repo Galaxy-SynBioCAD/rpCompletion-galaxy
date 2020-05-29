@@ -1,4 +1,4 @@
-<tool id="rpCompletions" name="Pathways to SBML" version="0.1">
+<tool id="rpCompletion" name="Complete Reactions" version="1.0">
   <description>From the output of RP2Paths and RetroPath2.0, generate SBML unique and complete (with cofactors) pathways with mono-component reactions</description>
   <requirements>
     <container type="docker">brsynth/rpCompletion</container>
@@ -43,7 +43,7 @@ Required:
 Advanced options:
 * **-upper_flux_bound**: (integer, default=9999) Upper flux bound value
 * **-lower_flux_bound**: (integer, default=0) Lower flux bound value
-* **-maxSubPaths_filter**: (integer, default=10) Number of subpaths per path
+* **-max_subpaths_filter**: (integer, default=10, 0=nofilter) Number of subpaths per path
 * **-pathway_id**: (string, default=rp_pathway) ID of the heterologous pathway
 * **-compartment_id**: (string, default=MNXC3 (i.e. cytoplasm)) Heterologous pathway compartment ID
 * **-species_group_id**: (string, default=central_species) ID of the central species, i.e. not cofactors, in the heterologous reactions
