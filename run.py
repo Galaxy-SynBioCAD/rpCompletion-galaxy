@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Created on May 4 2020
+Created on May 29 2020
 
 @author: Joan Hérisson
-@description: Galaxy script to query rpReader service
+@description: Galaxy script to query rpCompletion service
 
 """
 from sys import path as sys_path
-sys_path.insert(0, '/home/rpReader')
+sys_path.insert(0, '/home/src')
 from rpReader import build_parser as tool_buildparser
 from rpReader import entrypoint as tool_entrypoint
 from tarfile import open as tarfile_open
