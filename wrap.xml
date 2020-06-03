@@ -24,7 +24,7 @@
     </section>
   </inputs>
   <outputs>
-    <data name="output" format="tar" label="Heterologous pathways" />
+    <data name="output" format="tar.gz" label="Heterologous pathways" />
   </outputs>
   <help><![CDATA[
 rpCompletion
