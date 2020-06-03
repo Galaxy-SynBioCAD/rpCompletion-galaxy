@@ -8,8 +8,8 @@ Created on May 29 2020
 """
 from sys import path as sys_path
 sys_path.insert(0, '/home/src')
-from Main import build_parser as tool_buildparser
-from Main import entrypoint as tool_entrypoint
+from main import build_parser as tool_buildparser
+from main import entrypoint as tool_entrypoint
 from tarfile import open as tarfile_open
 from tarfile import TarInfo as tarfile_TarInfo
 from tempfile import TemporaryDirectory as tempfile_tempdir
