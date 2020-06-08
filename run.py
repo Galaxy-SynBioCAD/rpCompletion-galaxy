@@ -41,4 +41,4 @@ if __name__ == "__main__":
         # Format ouput data as expected by the wrapper
         with tarfile_open(params.output, mode='w:gz') as tf:
             for name in os_listdir(tmpdirname):
-                tf.add(tmpdirname+"/"+name)
+                tf.add(tmpdirname+"/"+name, arcname=name)
