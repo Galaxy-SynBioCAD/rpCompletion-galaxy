@@ -16,7 +16,6 @@ from tempfile import TemporaryDirectory as tempfile_tempdir
 from os import listdir as os_listdir
 
 
-
 if __name__ == "__main__":
 
     # Parse arguments with the tool parser
@@ -41,4 +40,4 @@ if __name__ == "__main__":
         # Format ouput data as expected by the wrapper
         with tarfile_open(params.output, mode='w:gz') as tf:
             for name in os_listdir(tmpdirname):
-                tf.add(tmpdirname+"/"+name, arcname=name)
+                tf.add(tmpdirname, arcname='Galaxy-'+'['+']')
