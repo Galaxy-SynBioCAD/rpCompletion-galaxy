@@ -24,7 +24,7 @@
     </section>
   </inputs>
   <outputs>
-    <data name="output" format="tar" label="Heterologous unique pathways" />
+    <data name="output" format="tar" label="${tool.name}" />
   </outputs>
   <help><![CDATA[
 rpCompletion
