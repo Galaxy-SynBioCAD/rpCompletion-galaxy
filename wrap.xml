@@ -36,11 +36,13 @@ Input
 -----
 
 Required:
+
 * **-rp2paths_pathways**: (string) Path to the rp2paths pathways file
 * **-rp2paths_compounds**: (string) Path to the rp2paths compounds file
 * **-rp2_pathways**: (string) Path to the RetroPath2.0 pathways file
 
 Advanced options:
+
 * **-upper_flux_bound**: (integer, default=9999) Upper flux bound value
 * **-lower_flux_bound**: (integer, default=0) Lower flux bound value
 * **-max_subpaths_filter**: (integer, default=10, 0=nofilter) Number of subpaths per path
