@@ -7,9 +7,6 @@
     <regex match="WARNING:" level="warning" />
 	  <regex match="ERROR:" level="error" />
   </stdio>
-  <!-- <command detect_errors="exit_code"><![CDATA[
-    '$__tool_directory__/run.py' -rp2paths_compounds '$rp2paths_compounds' -rp2_pathways '$rp2_pathways' -rp2paths_pathways '$rp2paths_pathways' -output '$output' -max_subpaths_filter '$adv.max_subpaths_filter' -compartment_id '$adv.compartment_id' -pathway_id '$adv.pathway_id' -species_group_id '$adv.species_group_id' -upper_flux_bound '$adv.upper_flux_bound' -lower_flux_bound '$adv.lower_flux_bound'
-  ]]></command> -->
   <command detect_errors="exit_code"><![CDATA[
     cd /tmp &&
     mkdir `basename '$output'` &&
