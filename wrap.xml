@@ -1,14 +1,30 @@
 <tool id="rpCompletion" name="Complete Reactions" version="1.0">
   <description>From the output of RP2Paths and RetroPath2.0, generate SBML unique and complete (with cofactors) pathways with mono-component reactions</description>
   <requirements>
-    <container type="docker">brsynth/rpCompletion</container>
+    <requirement type="package" version="1.0.5">rpcompletion</requirement>
   </requirements>
   <stdio>
     <regex match="WARNING:" level="warning" />
 	  <regex match="ERROR:" level="error" />
   </stdio>
-  <command detect_errors="exit_code"><![CDATA[
+  <!-- <command detect_errors="exit_code"><![CDATA[
     '$__tool_directory__/run.py' -rp2paths_compounds '$rp2paths_compounds' -rp2_pathways '$rp2_pathways' -rp2paths_pathways '$rp2paths_pathways' -output '$output' -max_subpaths_filter '$adv.max_subpaths_filter' -compartment_id '$adv.compartment_id' -pathway_id '$adv.pathway_id' -species_group_id '$adv.species_group_id' -upper_flux_bound '$adv.upper_flux_bound' -lower_flux_bound '$adv.lower_flux_bound'
+  ]]></command> -->
+  <command detect_errors="exit_code"><![CDATA[
+    outdir=$(mktemp -d)
+    python -m rpcompletion
+      '$rp2_pathways'
+      '$rp2paths_compounds'
+      '$rp2paths_pathways'
+      '$outdir'
+      --compartment_id '$adv.compartment_id'
+      --pathway_id '$adv.pathway_id'
+      --species_group_id '$adv.species_group_id'
+      --upper_flux_bound '$adv.upper_flux_bound'
+      --lower_flux_bound '$adv.lower_flux_bound'
+      --store_mode file
+    tar cvzf '$output.tar.gz' $outdir
+    rm -rf $outdir
   ]]></command>
   <inputs>
     <param name="rp2paths_pathways" type="data" format="csv" label="RP2paths pathways" />

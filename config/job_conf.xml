@@ -1,1 +1,1 @@
-    <tool id="rpCompletion" destination="docker_rpcache" />
+    <tool id="rpCompletion" destination="local" />
