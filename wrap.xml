@@ -4,8 +4,8 @@
     <requirement type="package">rpcompletion</requirement>
   </requirements>
   <stdio>
-    <regex match="WARNING:" level="warning" />
-	  <regex match="ERROR:" level="error" />
+    <exit_code range="1" level="error" description="Could not Xref compartment_id" />
+    <exit_code range="2" level="error" description="ValueError returned" />
   </stdio>
   <command detect_errors="exit_code"><![CDATA[
     cd /tmp &&
