@@ -1,4 +1,4 @@
-<tool id="rpCompletion" name="Complete Reactions" version="1.0">
+<tool id="rpCompletion" name="Complete Reactions">
   <description>From the output of RP2Paths and RetroPath2.0, generate SBML unique and complete (with cofactors) pathways with mono-component reactions</description>
   <requirements>
     <requirement type="package">rpcompletion</requirement>
