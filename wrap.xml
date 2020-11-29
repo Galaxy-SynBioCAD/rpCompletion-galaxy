@@ -19,8 +19,7 @@
       --pathway_id '$adv.pathway_id'
       --species_group_id '$adv.species_group_id'
       --upper_flux_bound '$adv.upper_flux_bound'
-      --lower_flux_bound '$adv.lower_flux_bound'
-      --store_mode file &&
+      --lower_flux_bound '$adv.lower_flux_bound' &&
     tar czf '$output' `basename '$output'` &&
     rm -rf `basename '$output'`
   ]]></command>
