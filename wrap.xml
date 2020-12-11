@@ -1,7 +1,7 @@
-<tool id="rpCompletion" name="Complete Reactions" version="1.2.2">
+<tool id="rpCompletion" name="Complete Reactions">
   <description>From the output of RP2Paths and RetroPath2.0, generate SBML unique and complete (with cofactors) pathways with mono-component reactions</description>
   <requirements>
-    <requirement type="package" version="1.2.2">rpcompletion</requirement>
+    <requirement type="package">rpcompletion</requirement>
   </requirements>
   <stdio>
     <exit_code range="1" level="error" description="Could not Xref compartment_id" />
