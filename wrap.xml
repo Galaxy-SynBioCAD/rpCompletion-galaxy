@@ -18,7 +18,6 @@
         --species_group_id '$adv.species_group_id'
         --upper_flux_bound '$adv.upper_flux_bound'
         --lower_flux_bound '$adv.lower_flux_bound'
-    && tar czf $output completed_pathways
   ]]></command>
   <inputs>
     <param name="rp2paths_pathways" type="data" format="csv" label="RP2paths pathways" />
@@ -33,14 +32,12 @@
       <param name="lower_flux_bound" type="integer" value="0" label="Lower flux bound" />
     </section>
   </inputs>
-  <!-- <outputs>
     <collection name="list_output" type="list" label="${tool.name}">
-      <discover_datasets pattern=".+\.xml" ext="xml" directory="completed_pathways" visible="true" />
+      <discover_datasets pattern="(?P&lt;designation&gt;.+)\.xml" ext="xml" directory="completed_pathways" visible="false" />
     </collection>
-  </outputs> -->
-  <outputs>
+  <!-- <outputs>
     <data name="output" format="tar.gz" label="${tool.name}" />
-  </outputs>
+  </outputs> -->
   <help><![CDATA[
 rpCompletion
 ============
