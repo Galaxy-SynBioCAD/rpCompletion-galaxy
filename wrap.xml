@@ -22,7 +22,7 @@
   <inputs>
     <param name="rp2paths_pathways" type="data" format="csv" label="RP2paths pathways" />
     <param name="rp2paths_compounds" type="data" format="tsv" label="RP2paths compounds" />
-    <param name="rp2_pathways" type="data" format="csv" label="RetroPath2.0 pathways" />
+    <param name="rp2_pathways" type="data" format="csv" label="RetroPath2.0 output" />
     <section name="adv" title="Advanced Options" expanded="false">
       <param name="max_subpaths_filter" type="integer" value="10" label="Max subpaths generated per pathway" />
       <param name="compartment_id" type="text" value="MNXC3" label="SBML compartment ID" />
